@@ -66,12 +66,12 @@ jobs:
       - name: Download stock firmwares
         run: |
           source ./buildenv.sh ${{ matrix.target }}
-          ./scripts/download_fw.sh
+          ./scripts/download_fw.sh --force
 
       - name: Extract stock firmwares
         run: |
           source ./buildenv.sh ${{ matrix.target }}
-          ./scripts/extract_fw.sh
+          ./scripts/extract_fw.sh --force
 
       - name: Build ROM
         run: |
